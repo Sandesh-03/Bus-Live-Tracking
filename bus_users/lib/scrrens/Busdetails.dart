@@ -24,7 +24,7 @@ class _BusDetailsState extends State<BusDetails> {
   late String logx;
   Future<Album> fetchAlbum() async {
     final response = await http.get(Uri.parse(
-        'https://maps.googleapis.com/maps/api/distancematrix/json?origins=${currentLocation!.latitude!.toInt()}%2C${currentLocation!.latitude!.toInt()}&destinations=19.0760%2C72.8777&key=AIzaSyCf27kGgk8LEH0mVy9sXNjBVmmEqhuCRas'));
+        'https://maps.googleapis.com/maps/api/distancematrix/json?origins=${currentLocation!.latitude!.toInt()}%2C${currentLocation!.latitude!.toInt()}&destinations=19.0760%2C72.8777&key=<API KEY>'));
     print(response.body);
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
